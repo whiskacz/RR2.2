@@ -1,8 +1,17 @@
-import { data } from './data.js'
-import {combineAge, renderAge} from './helpers.js'
+import React from "react";
+import ReactDOM  from "react-dom";
+import { data } from "./data"
 
 
-const tekst = document.querySelector('h1')
-console.log(combineAge(data))
 
-renderAge(tekst, data)
+const UsersList = () => {
+    return(
+    <div>
+        {data.map(({name, age}) => (
+            <p>{name}, {age}</p>
+        ))}
+    </div>
+    )
+}
+
+ReactDOM.render(<UsersList />, document.getElementById("app"))

@@ -5,7 +5,7 @@ export const data = [
     },
     {
         name : "Kasia",
-        age : 25,
+        age : 5,
     },
     {
         name : "Karol",
